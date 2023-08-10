@@ -1,2 +1,1 @@
-# lpaw
-Linguagem de Programação para Animação Web
+# Linguagem de Programação para Animação Web
