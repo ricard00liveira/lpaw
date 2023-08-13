@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da Página</title>
+</head>
+<style type="text/css">
+
+div {
+    background-image: url('goblin_big.png');
+    background-size: 48px 73px;
+    width: 16px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: 0px 0px;
+    animation-name: div-sprite;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+	}
+
+@keyframes div-sprite 
+	{
+     0% 		{background-position: 	0px   0px; 	transform: translateY(0px);						}
+     6.66% 		{background-position: -17px   0px; 	transform: translateY(5px);						}
+     13.32% 	{background-position: -33px   0px; 	transform: translateY(10px); 					}
+     19.98% 	{background-position: -17px   0px; 	transform: translateY(15px);					}
+     26.64% 	{background-position: 	0px -36px; 	transform: translateY(20px);					}
+     33.3% 		{background-position: -17px -36px; 	transform: translateY(20px) translateX(5px);	}
+     39.96%		{background-position: -33px -36px; 	transform: translateY(20px) translateX(10px);	}
+     46.62% 	{background-position: 	0px -36px; 	transform: translateY(20px) translateX(15px);	}     
+     53.28% 	{background-position: 	0px -18px; 	transform: translateY(15px) translateX(15px);	}
+     59.94% 	{background-position: -17px -18px;	transform: translateY(10px) translateX(15px);	}
+     66.6% 		{background-position: -33px -18px;	transform: translateY(5px) 	translateX(15px);	}
+     73.26% 	{background-position: 	0px -18px; 	transform: translateY(0px) 	translateX(15px);	}
+     79.92%		{background-position: 	0px -55px; 	transform: translateY(0px) 	translateX(15px);	}
+     86.58%		{background-position: -17px -55px; 	transform: translateY(0px) 	translateX(10px);	}
+     93.24%		{background-position: -33px -55px; 	transform: translateY(0px) 	translateX(5px);	}
+     99.9%		{background-position: 	0px -55px; 	transform: translateY(0px) 	translateX(0px);	}
+	}
+</style>
+<body>
+    <div></div>
+</body>
+</html>
