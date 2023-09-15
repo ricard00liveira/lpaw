@@ -1,12 +1,57 @@
-body, html {
+.hidden {
+    display: none;
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url("ground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-attachment: fixed;
+    animation: backgroundAnimation 3s infinite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url("bgImg/1.png");
+    }
+    10% {
+        background-image: url("bgImg/2.png");
+    }
+    20% {
+        background-image: url("bgImg/3.png");
+    }
+    30% {
+        background-image: url("bgImg/4.png");
+    }
+    40% {
+        background-image: url("bgImg/5.png");
+    }
+    50% {
+        background-image: url("bgImg/6.png");
+    }
+    60% {
+        background-image: url("bgImg/7.png");
+    }
+    70% {
+        background-image: url("bgImg/8.png");
+    }
+    80% {
+        background-image: url("bgImg/9.png");
+    }
+    90% {
+        background-image: url("bgImg/10.png");
+    }
+    100% {
+        background-image: url("bgImg/11.png");
+    }
+
 }
 
 .container {
@@ -17,16 +62,6 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
-
-/*.content {
-    background-color: #FFF;
-    margin: 10px;
-    width: 500px;
-    height: 500px;
-    border-width: 32px;
-    border-style: solid;
-    border-image: url("border.gif") 100% repeat;
-}*/
 
 .border-wrapper {
     background-image: url("border.gif");

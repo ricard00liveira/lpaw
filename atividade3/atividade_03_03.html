@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Exercícios LPAW</title>
+	</head>
+	<body>
+		<canvas width="600" height="400">
+			
+		</canvas>
+	<script type="text/javascript">
+		const canvas = document.querySelector('canvas');
+		const context = canvas.getContext('2d');
+		triEqui(context, 100, 80, 80, "#000");
+		triEqui(context, 200, 10, 80, "#0f0", true);
+
+function triEqui(ctx, x, y, l, color, rev=false) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  const height = l * Math.sqrt(3) / 2;
+  if (rev) {
+    ctx.lineTo(x + l / 2, y + height);
+    ctx.lineTo(x - l / 2, y + height);
+
+  } else {
+    ctx.lineTo(x + l / 2, y - height);
+    ctx.lineTo(x - l / 2, y - height);
+  }
+
+  ctx.fillStyle = color;
+  ctx.fill();
+  ctx.closePath();
+}
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Exercícios LPAW</title>
+	</head>
+	<body>
+		<canvas width="600" height="400">
+			
+		</canvas>
+	<script type="text/javascript">
+		const canvas = document.querySelector('canvas');
+		const context = canvas.getContext('2d');
+		
+		circ(context,100,50,30,5,"#f00");
+		circ(context,200,50,40,10,"#00f","#0f0");
+		
+		function circ(ctx,x,y,r,l,color,fill=false) {
+			ctx.beginPath();
+			ctx.lineWidth = l;
+			ctx.arc(x,y,r,0,Math.PI/180*360);
+			ctx.strokeStyle = color;
+			ctx.stroke();
+			if(fill != false) {
+				ctx.fillStyle = fill;
+				ctx.fill();
+			}
+			ctx.closePath();
+		}
+	</script>
+	</body>
+</html>

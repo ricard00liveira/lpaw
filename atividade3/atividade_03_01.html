@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Exercícios LPAW</title>
+	</head>
+	<body>
+		<canvas width="600" height="400">
+			
+		</canvas>
+	<script type="text/javascript">
+		const canvas = document.querySelector('canvas');
+		const context = canvas.getContext('2d');
+
+		quad(context,50,30,50,5,"magenta");
+		quad(context,120,30,50,5,"blue","red");
+
+		function quad(ctx,x,y,s,l,color,fill=false) {
+			ctx.beginPath();
+			ctx.lineWidth = l;
+			ctx.rect(x,y,s,s);
+			ctx.strokeStyle = color;
+			ctx.stroke();
+			if(fill != false) {
+				ctx.fillStyle = fill;
+				ctx.fill();
+			}
+			ctx.closePath();
+		}
+	</script>
+	</body>
+</html>

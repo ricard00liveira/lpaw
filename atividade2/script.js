@@ -25,3 +25,35 @@ document.addEventListener("DOMContentLoaded", function() {
         easing: 'easeOutElastic(1, .5)'
     });
 });
+
+const images = [
+    "bgImg/1.png",
+    "bgImg/2.png",
+    "bgImg/3.png",
+    "bgImg/4.png",
+    "bgImg/5.png",
+    "bgImg/6.png",
+    "bgImg/7.png",
+    "bgImg/8.png",
+    "bgImg/9.png",
+    "bgImg/10.png",
+    "bgImg/11.png"
+];
+
+let imagesLoaded = 0;
+
+images.forEach((src) => {
+  const img = new Image();
+  img.src = src;
+  img.onload = () => {
+    imagesLoaded++;
+    if (imagesLoaded === images.length) {
+      document.body.classList.remove('hidden');
+    }
+  };
+});
+
+const startButton = document.querySelector('.start-button');
+startButton.addEventListener('click', () => {
+    document.body.style.animationPlayState = 'paused';
+})
